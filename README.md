@@ -2,13 +2,10 @@
 
 ![scroll-cord-effect](https://user-images.githubusercontent.com/83178592/189028880-83c1240d-cb94-4f78-88e1-ec5975bdc717.gif)
 
-```script
-let bg = document.getElementById('bg');
-    let moon = document.getElementById('moon');
-    let mountain = document.getElementById('mountain');
-    let road = document.getElementById('road');
-    let text = document.getElementById('text');
+### Script
 
+```
+...
     document.addEventListener('scroll', (e) => {
       let scrollValue = window.scrollY;
       console.log(scrollValue);
@@ -25,4 +22,5 @@ let bg = document.getElementById('bg');
       console.log(`clientX:${clientX}, clientY:${clientY}`);
       console.log(`pageX:${pageX}, pageY:${pageY}`);
     });
+...
 ```
