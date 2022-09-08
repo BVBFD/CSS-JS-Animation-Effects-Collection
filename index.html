@@ -4,39 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>3d-hover-effect</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="clock">
-      <div class="centerDot">
-        <div class="hour">
-          <div class="hr"></div>
+    <div class="container">
+      <div class="card">
+        <div class="imgBox">
+          <img src="data.png" alt="" />
         </div>
-        <div class="min">
-          <div class="mn"></div>
+
+        <div class="detail">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ratione. Quasi, nihil. Velit, ad sequi. Magnam nam itaque officiis
+            error omnis delectus, ut sequi dolorem, quae numquam atque deserunt
+            nihil.
+          </p>
         </div>
-        <div class="sec">
-          <div class="sc"></div>
+      </div>
+
+      <div class="card">
+        <div class="imgBox">
+          <img src="money.png" alt="" />
+        </div>
+
+        <div class="detail">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ratione. Quasi, nihil. Velit, ad sequi. Magnam nam itaque officiis
+            error omnis delectus, ut sequi dolorem, quae numquam atque deserunt
+            nihil.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgBox">
+          <img src="sketch.png" alt="" />
+        </div>
+
+        <div class="detail">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ratione. Quasi, nihil. Velit, ad sequi. Magnam nam itaque officiis
+            error omnis delectus, ut sequi dolorem, quae numquam atque deserunt
+            nihil.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgBox">
+          <img src="startup.png" alt="" />
+        </div>
+
+        <div class="detail">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            ratione. Quasi, nihil. Velit, ad sequi. Magnam nam itaque officiis
+            error omnis delectus, ut sequi dolorem, quae numquam atque deserunt
+            nihil.
+          </p>
         </div>
       </div>
     </div>
-    <script>
-      const deg = 6;
-      const hour = document.querySelector('.hour');
-      const min = document.querySelector('.min');
-      const sec = document.querySelector('.sec');
-
-      setInterval(() => {
-        let day = new Date();
-        let hh = day.getHours() * 30;
-        let mm = day.getMinutes() * deg;
-        let ss = day.getSeconds() * deg;
-
-        hour.style.transform = `rotateZ(${hh + mm / 12}deg)`;
-        min.style.transform = `rotateZ(${mm}deg)`;
-        sec.style.transform = `rotateZ(${ss}deg)`;
-      }, 1000);
-    </script>
   </body>
 </html>
