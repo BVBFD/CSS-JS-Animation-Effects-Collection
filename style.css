@@ -1,95 +1,63 @@
 * {
-  transition: all 0.2s linear;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aliceblue;
+  background: #0a2a43;
+  min-height: 1500px;
 }
 
-.videoContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.videoContainer p {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  font-size: 3.5rem;
-  font-weight: bolder;
-  color: white;
-  z-index: 3;
-}
-
-.videoAndOverlayBox {
+section {
   position: relative;
-  height: 45rem;
-}
-
-.videoAndOverlayBox .videoOverlay {
-  position: absolute;
   width: 100%;
-  top: 0;
-  background: #225470;
-  opacity: 0.45;
-  z-index: 2;
-  border-radius: 1rem;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.videoAndOverlayBox video {
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
+  /* background: linear-gradient(to top, #0a2a43, transparent); */
+  z-index: 10000;
 }
 
-.videoContainer .locatorBox {
-  margin-top: 10px;
+section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2a43;
+  mix-blend-mode: color;
+  /* z-index: 10000; */
 }
 
-.videoContainer .locatorBox span {
-  display: inline-block;
-  border: 5px solid black;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background-color: transparent;
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
-.videoContainer .locatorBox span:hover {
-  background: black;
+#road {
+  z-index: 2;
 }
 
-@media screen and (max-width: 1024px) {
-  html {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-
-  .videoContainer p {
-    font-size: 4vw;
-  }
-
-  .videoContainer .locatorBox span {
-    width: 2rem;
-    height: 2rem;
-    border: 3px solid black;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .videoContainer .locatorBox span {
-    width: 1rem;
-    height: 1rem;
-    border: 3px solid black;
-  }
+#text {
+  position: relative;
+  color: #fff;
+  font-size: 10em;
+  z-index: 1;
 }

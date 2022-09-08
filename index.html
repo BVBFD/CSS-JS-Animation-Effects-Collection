@@ -4,22 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Background Effect</title>
+    <title>index</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
   </head>
   <body>
-    <div class="videoContainer">
-      <div class="videoAndOverlayBox">
-        <video src="video/about-vid-1.mp4" autoplay muted loop></video>
-        <p>Travel your Place and Find the Freedom</p>
-        <div class="videoOverlay"></div>
-      </div>
-      <div class="locatorBox">
-        <span data-src="video/about-vid-1.mp4"></span>
-        <span data-src="video/about-vid-2.mp4"></span>
-        <span data-src="video/about-vid-3.mp4"></span>
-      </div>
-    </div>
+    <section>
+      <img id="bg" src="bg.jpg" />
+      <img id="moon" src="moon.png" />
+      <img id="mountain" src="mountain.png" />
+      <img id="road" src="road.png" />
+      <h2 id="text">Moon Light</h2>
+    </section>
   </body>
+  <script>
+    let bg = document.getElementById('bg');
+    let moon = document.getElementById('moon');
+    let mountain = document.getElementById('mountain');
+    let road = document.getElementById('road');
+    let text = document.getElementById('text');
+
+    document.addEventListener('scroll', (e) => {
+      let scrollValue = window.scrollY;
+      console.log(scrollValue);
+
+      moon.style.left = -scrollValue * 1.5 + 'px';
+      text.style.bottom = -scrollValue * 0.5 + 'px';
+    });
+
+    document.addEventListener('click', (e) => {
+      let clientX = e.clientX;
+      let clientY = e.clientY;
+      let pageX = e.pageX;
+      let pageY = e.pageY;
+      console.log(`clientX:${clientX}, clientY:${clientY}`);
+      console.log(`pageX:${pageX}, pageY:${pageY}`);
+    });
+  </script>
 </html>
