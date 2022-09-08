@@ -4,40 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>Raindrops Effect</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section>
-      <img id="bg" src="bg.jpg" />
-      <img id="moon" src="moon.png" />
-      <img id="mountain" src="mountain.png" />
-      <img id="road" src="road.png" />
-      <h2 id="text">Moon Light</h2>
+      <img id="background" alt="background" src="" />
     </section>
+    <script src="rainyday.js"></script>
+    <script>
+      function rain() {
+        const image = document.getElementById('background');
+        image.onload = function () {
+          let rainyDay = new RainyDay({
+            image: this,
+            blur: 10,
+            fps: 40,
+          });
+          RainyDay.rain([[5, 2, 2]], 0);
+        };
+        image.src = 'bg.jpg';
+      }
+
+      rain();
+    </script>
   </body>
-  <script>
-    let bg = document.getElementById('bg');
-    let moon = document.getElementById('moon');
-    let mountain = document.getElementById('mountain');
-    let road = document.getElementById('road');
-    let text = document.getElementById('text');
-
-    document.addEventListener('scroll', (e) => {
-      let scrollValue = window.scrollY;
-      console.log(scrollValue);
-
-      moon.style.left = -scrollValue * 1.5 + 'px';
-      text.style.bottom = -scrollValue * 0.5 + 'px';
-    });
-
-    document.addEventListener('click', (e) => {
-      let clientX = e.clientX;
-      let clientY = e.clientY;
-      let pageX = e.pageX;
-      let pageY = e.pageY;
-      console.log(`clientX:${clientX}, clientY:${clientY}`);
-      console.log(`pageX:${pageX}, pageY:${pageY}`);
-    });
-  </script>
 </html>
