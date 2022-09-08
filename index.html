@@ -4,29 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raindrops Effect</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
-      <img id="background" alt="background" src="" />
-    </section>
-    <script src="rainyday.js"></script>
+    <div class="clock">
+      <div class="centerDot">
+        <div class="hour">
+          <div class="hr"></div>
+        </div>
+        <div class="min">
+          <div class="mn"></div>
+        </div>
+        <div class="sec">
+          <div class="sc"></div>
+        </div>
+      </div>
+    </div>
     <script>
-      function rain() {
-        const image = document.getElementById('background');
-        image.onload = function () {
-          let rainyDay = new RainyDay({
-            image: this,
-            blur: 10,
-            fps: 40,
-          });
-          RainyDay.rain([[5, 2, 2]], 0);
-        };
-        image.src = 'bg.jpg';
-      }
+      const deg = 6;
+      const hour = document.querySelector('.hour');
+      const min = document.querySelector('.min');
+      const sec = document.querySelector('.sec');
 
-      rain();
+      setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+
+        hour.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+        min.style.transform = `rotateZ(${mm}deg)`;
+        sec.style.transform = `rotateZ(${ss}deg)`;
+      }, 1000);
     </script>
   </body>
 </html>
