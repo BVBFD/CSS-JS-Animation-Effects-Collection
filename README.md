@@ -2,6 +2,7 @@
 
 ![clock-ui](https://user-images.githubusercontent.com/83178592/189068385-a79cdfbd-86d0-43d1-9acf-686c81015797.gif)
 
+<hr/>
 
 ### Explain
 
