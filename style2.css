@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  display: inline-block;
+  text-align: center;
+}
+
+html::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+html::-webkit-scrollbar-track {
+  background: black;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+#intro {
+  flex-direction: row;
+}
+
+#intro .textBox {
+  flex: 2;
+  height: 100%;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro .textBox h1 {
+  font-size: 30rem;
+}
+
+#intro .imgBox {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: blue;
+}
+
+#intro .imgBox img {
+}
+
+#name {
+  justify-content: flex-start;
+  align-items: center;
+  background: url('../img/bg1.png') fixed;
+  background-color: white;
+  color: blueviolet;
+  position: relative;
+  z-index: 99;
+}
+
+#name h1 {
+  font-size: 10rem;
+}
+
+#job {
+  background: url('../img/bg1.png') fixed;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+  color: whitesmoke;
+}
+
+#job h1 {
+  font-size: 10rem;
+  margin: 1rem;
+}
+
+#projects {
+  justify-content: center;
+  align-items: flex-start;
+  background: url('../img/bg2.png') fixed;
+  background-color: lightyellow;
+  color: darkred;
+}
+
+#projects h1 {
+  font-size: 10rem;
+  position: relative;
+  top: 200vh;
+}
+
+#laptop {
+  flex-direction: row;
+  background: url('../img/bg2.png') fixed;
+  background-color: black;
+  color: white;
+}
+
+#laptop .explainBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+#laptop .explainBox h1 {
+  font-size: 10rem;
+}
+
+#laptop .explainBox p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#laptop .explainBox button {
+  margin-top: 4rem;
+  padding: 1rem 1.4rem;
+  background-color: goldenrod;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+#laptop .explainBox button:hover {
+  background-color: white;
+  color: goldenrod;
+}
+
+#laptop .explainBox button:active {
+  transform: scale(0.8);
+}
+
+#laptop .imgBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#laptop .imgBox img {
+  transform: translateX(0);
+}
+
+/* mobile */
+#mobile {
+  flex-direction: row-reverse;
+  background: url('../img/bg2.png') fixed;
+  background-color: white;
+}
+
+#mobile .explainBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+#mobile .explainBox h1 {
+  font-size: 10rem;
+}
+
+#mobile .explainBox p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#mobile .explainBox button {
+  margin-top: 4rem;
+  padding: 1rem 1.4rem;
+  background-color: goldenrod;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+#mobile .explainBox button:hover {
+  background-color: white;
+  color: goldenrod;
+}
+
+#mobile .explainBox button:active {
+  transform: scale(0.8);
+}
+
+#mobile .imgBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobile .imgBox img {
+  transform: translateX(0);
+}
