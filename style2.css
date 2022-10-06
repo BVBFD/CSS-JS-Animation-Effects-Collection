@@ -40,10 +40,12 @@ section {
 #intro .textBox {
   flex: 2;
   height: 100%;
-  background: yellow;
+  background: url('../img/bg1.png') fixed;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 #intro .textBox h1 {
@@ -56,10 +58,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: blue;
+  background: url('../img/bg2.png') fixed;
+  background-color: white;
 }
 
 #intro .imgBox img {
+  filter: drop-shadow(12px 14px 2px black);
 }
 
 #name {
@@ -214,3 +218,5 @@ section {
 #mobile .imgBox img {
   transform: translateX(0);
 }
+
+/* #github {} */
