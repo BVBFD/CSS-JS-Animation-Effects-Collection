@@ -219,4 +219,75 @@ section {
   transform: translateX(0);
 }
 
-/* #github {} */
+#port {
+  background: url('../img/bg1.png') fixed;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#port button {
+  width: fit-content;
+  height: 40%;
+  font-size: 8rem;
+  font-weight: bolder;
+  padding: 2rem 4rem;
+  text-transform: capitalize;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+
+#port button:after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  content: 'Visit To Portfoilo Website';
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#port button:hover::after {
+  transform: translateX(100%);
+}
+
+#port span {
+  display: block;
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  color: black;
+  width: fit-content;
+  background-color: white;
+  height: 7rem;
+  padding: 0 1rem 1rem 1rem;
+  padding-bottom: 1rem;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    50% 100%,
+    50% 75%,
+    0% 75%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  transition: all 4s;
+}
