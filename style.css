@@ -370,9 +370,6 @@ section {
     transform: none !important;
   }
 
-  #laptop .imgBox .laptopOutside {
-  }
-
   #mobile .imgBox .mobileOutside {
     top: 15%;
   }
@@ -415,7 +412,7 @@ section {
 
   #laptop {
     flex-direction: column;
-    height: 200vh;
+    height: 160vh;
   }
 
   #laptop .imgBox {
@@ -424,7 +421,7 @@ section {
 
   #mobile {
     flex-direction: column !important;
-    height: 250vh;
+    height: 170vh;
   }
 
   #mobile .imgBox .mobileOutside {
@@ -434,6 +431,10 @@ section {
   .explainBox {
     text-align: center;
     overflow-wrap: anywhere;
+  }
+
+  #port {
+    display: none;
   }
 
   #port span {
@@ -447,7 +448,11 @@ section {
 
 @media screen and (max-width: 960px) {
   #laptop {
-    height: 130vh;
+    height: 160vh;
+  }
+
+  #laptop .imgBox {
+    margin-top: 0;
   }
 
   #laptop .imgBox .laptopOutside {
@@ -456,7 +461,7 @@ section {
   }
 
   #mobile {
-    height: 150vh;
+    height: 170vh;
   }
 }
 
@@ -475,7 +480,7 @@ section {
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 720px) {
   #intro .textBox h1 {
     font-size: 12rem;
   }
@@ -533,7 +538,37 @@ section {
 
 @media screen and (max-width: 400px) {
   #laptop {
+    height: 160vh;
+  }
+
+  #mobile {
     height: 200vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #laptop {
+    height: 170vh;
+  }
+
+  #mobile {
+    height: 210vh;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #laptop {
+    height: 200vh;
+  }
+
+  #mobile {
+    height: 240vh;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  #laptop {
+    height: 180vh;
   }
 
   #mobile {
@@ -541,33 +576,13 @@ section {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-height: 700px) {
   #laptop {
-    height: 270vh;
+    height: 200vh;
   }
 
   #mobile {
-    height: 330vh;
-  }
-}
-
-@media screen and (min-height: 852px) {
-  #laptop {
-    height: 140vh !important;
-  }
-
-  #mobile {
-    height: 180vh !important;
-  }
-}
-
-@media screen and (min-height: 820px) {
-  #laptop {
-    height: 160vh;
-  }
-
-  #mobile {
-    height: 180vh;
+    height: 250vh;
   }
 }
 
@@ -577,6 +592,6 @@ section {
   }
 
   #mobile .imgBox .mobileOutside {
-    transform: scale(1.5);
+    transform: scaleY(1.2) scaleX(1.5);
   }
 }
