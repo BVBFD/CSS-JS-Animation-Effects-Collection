@@ -7,7 +7,7 @@ const Laptop = document.querySelector('.laptop .imgBox');
 const Mobile = document.querySelector('.mobile .imgBox');
 const Port = document.querySelector('.port');
 const PortSpan = document.querySelector('.port span');
-const PortBtn = document.querySelector('.port button');
+const PortBtn = document.querySelector('.port a');
 
 window.addEventListener('scroll', () => {
   let offsetY = window.scrollY;
@@ -57,7 +57,3 @@ window.addEventListener('mousemove', (e) => {
       'Please Hover on here, please!<br />마우스를 올려주세요!';
   }
 });
-
-const handleBtnClick = () => {
-  window.location.href = 'https://bvbfd.github.io/Portfolio-Website-ver2.0/';
-};
