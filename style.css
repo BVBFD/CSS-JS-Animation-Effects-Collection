@@ -40,7 +40,7 @@ section {
 #intro .textBox {
   flex: 2;
   height: 100%;
-  background: url('../img/bg1.png') fixed;
+  background: url('img/bg1.png') fixed;
   background-color: black;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../img/bg2.png') fixed;
+  background: url('img/bg2.png') fixed;
   background-color: white;
 }
 
@@ -69,7 +69,7 @@ section {
 #name {
   justify-content: flex-start;
   align-items: center;
-  background: url('../img/bg1.png') fixed;
+  background: url('img/bg1.png') fixed;
   background-color: white;
   color: blueviolet;
   position: relative;
@@ -81,7 +81,7 @@ section {
 }
 
 #job {
-  background: url('../img/bg1.png') fixed;
+  background: url('img/bg1.png') fixed;
   justify-content: flex-end;
   align-items: center;
   background-color: black;
@@ -96,7 +96,7 @@ section {
 #projects {
   justify-content: center;
   align-items: flex-start;
-  background: url('../img/bg2.png') fixed;
+  background: url('img/bg2.png') fixed;
   background-color: lightyellow;
   color: darkred;
 }
@@ -109,7 +109,7 @@ section {
 
 #laptop {
   flex-direction: row;
-  background: url('../img/bg2.png') fixed;
+  background: url('img/bg2.png') fixed;
   background-color: black;
   color: white;
 }
@@ -195,7 +195,7 @@ section {
 /* mobile */
 #mobile {
   flex-direction: row-reverse;
-  background: url('../img/bg2.png') fixed;
+  background: url('img/bg2.png') fixed;
   background-color: white;
 }
 
@@ -263,7 +263,7 @@ section {
 }
 
 #port {
-  background: url('../img/bg1.png') fixed;
+  background: url('img/bg1.png') fixed;
   background-color: black;
   display: flex;
   justify-content: center;
