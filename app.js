@@ -1,3 +1,8 @@
+const LaptopImg = document.querySelector('.laptop .imgBox img');
+const MobileImg = document.querySelector('.mobile .imgBox img');
+
+console.log();
+
 const IntroText = document.querySelector('.intro .textBox h1');
 const IntroImg = document.querySelector('.intro .imgBox img');
 const IntroName = document.querySelector('.name h1');
@@ -20,7 +25,7 @@ window.addEventListener('scroll', () => {
   IntroJob.style.transform = `translateX(-${offsetY * 0.3}px)`;
 
   Projects.style.transform = `translateY(-${offsetY * 0.6}px)`;
-  Laptop.style.transform = `translateX(calc(400vh - ${offsetY}px))`;
+  Laptop.style.transform = `translateX(calc(395vh - ${offsetY}px))`;
   Mobile.style.transform = `translateX(calc(-500vh + ${offsetY}px))`;
 
   PortSpan.style.opacity = 1;

@@ -31,6 +31,9 @@ section {
   height: 100vh;
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 #intro {
@@ -117,6 +120,7 @@ section {
 #laptop .explainBox {
   flex: 1;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -153,7 +157,6 @@ section {
 
 #laptop .imgBox {
   flex: 1;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -161,35 +164,39 @@ section {
   transform: translateX(0);
 }
 
-#laptop .imgBox .laptopInside {
+#laptop .imgBox .laptopOutside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#laptop .imgBox .laptopOutside .laptopInside {
   width: 32rem;
   height: 20rem;
-  position: absolute;
-  bottom: 37%;
   border-radius: 1rem;
   overflow-x: hidden;
   overflow-y: scroll;
+  position: absolute;
+  top: 0;
   transform: scale(0.85);
 }
 
-#laptop .imgBox .laptopInside::-webkit-scrollbar {
+#laptop .imgBox .laptopOutside .laptopInside img {
+  width: 100%;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+#laptop .imgBox .laptopOutside .laptopInside::-webkit-scrollbar {
   width: 0.4rem;
 }
 
-#laptop .imgBox .laptopInside::-webkit-scrollbar-thumb {
+#laptop .imgBox .laptopOutside .laptopInside::-webkit-scrollbar-thumb {
   background-color: black;
 }
 
-#laptop .imgBox .laptopInside::-webkit-scrollbar-track {
+#laptop .imgBox .laptopOutside .laptopInside::-webkit-scrollbar-track {
   background-color: white;
-}
-
-#laptop .imgBox .laptopInside img {
-  width: 100%;
-  border-radius: 1rem;
-  position: absolute;
-  right: 1%;
-  pointer-events: none;
 }
 
 /* mobile */
@@ -239,6 +246,7 @@ section {
 #mobile .imgBox {
   flex: 1;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -246,9 +254,14 @@ section {
   position: relative;
 }
 
-#mobile .imgBox .mobileInside {
+#mobile .imgBox .mobileOutside {
   position: absolute;
-  top: 22.4%;
+}
+
+#mobile .imgBox .mobileOutside .mobileInside {
+  position: absolute;
+  top: 2%;
+  left: 6%;
   width: 16.4rem;
   height: 36rem;
   border-radius: 2rem;
@@ -256,7 +269,7 @@ section {
   overflow-y: scroll;
 }
 
-#mobile .imgBox .mobileInside img {
+#mobile .imgBox .mobileOutside .mobileInside img {
   width: 100%;
   border-radius: 2rem;
   pointer-events: none;
@@ -335,4 +348,235 @@ section {
   align-items: center;
   font-size: 1.4rem;
   transition: all 4s;
+}
+
+@media screen and (max-width: 1280px) {
+  #intro *,
+  #name *,
+  #job *,
+  #projects * {
+    transform: none !important;
+  }
+
+  #projects h1 {
+    top: 15%;
+  }
+
+  #laptop .imgBox {
+    transform: none !important;
+  }
+
+  #mobile .imgBox {
+    transform: none !important;
+  }
+
+  #laptop .imgBox .laptopOutside {
+  }
+
+  #mobile .imgBox .mobileOutside {
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #intro {
+    flex-direction: column;
+  }
+
+  #intro .textBox {
+    width: 100%;
+  }
+
+  #intro .imgBox {
+    display: none;
+  }
+
+  #name h1 {
+    width: 100%;
+    font-size: 6rem !important;
+  }
+
+  #job h1 {
+    width: 100%;
+    font-size: 6rem !important;
+  }
+
+  #projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #projects h1 {
+    width: 100%;
+    top: 0%;
+    font-size: 6rem !important;
+  }
+
+  #laptop {
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  #laptop .imgBox {
+    margin-top: 3rem;
+  }
+
+  #mobile {
+    flex-direction: column !important;
+    height: 250vh;
+  }
+
+  #mobile .imgBox .mobileOutside {
+    top: 10%;
+  }
+
+  .explainBox {
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  #port span {
+    display: none;
+  }
+
+  #port a {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #laptop {
+    height: 130vh;
+  }
+
+  #laptop .imgBox .laptopOutside {
+    position: relative;
+    top: 10vh;
+  }
+
+  #mobile {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #laptop {
+    height: 150vh;
+  }
+
+  #laptop .imgBox .laptopOutside {
+    position: relative;
+    top: 10vh;
+  }
+
+  #mobile {
+    height: 170vh;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #intro .textBox h1 {
+    font-size: 12rem;
+  }
+
+  #name h1 {
+    font-size: 4rem !important;
+  }
+
+  #job h1 {
+    font-size: 3rem !important;
+  }
+
+  #projects h1 {
+    font-size: 3rem !important;
+  }
+
+  #laptop .explainBox h1 {
+    font-size: 3rem;
+  }
+
+  #laptop .explainBox p {
+    font-size: 1.1rem;
+  }
+
+  #laptop .imgBox .laptopOutside {
+    transform: scale(0.8);
+  }
+
+  #mobile .explainBox h1 {
+    font-size: 3rem;
+  }
+
+  #mobile .explainBox p {
+    font-size: 1.1rem;
+  }
+
+  #mobile .imgBox .mobileOutside {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #laptop {
+    height: 160vh;
+  }
+
+  #laptop .imgBox .laptopOutside {
+    transform: scale(0.6);
+  }
+
+  #mobile {
+    height: 190vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #laptop {
+    height: 200vh;
+  }
+
+  #mobile {
+    height: 230vh;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #laptop {
+    height: 270vh;
+  }
+
+  #mobile {
+    height: 330vh;
+  }
+}
+
+@media screen and (min-height: 852px) {
+  #laptop {
+    height: 140vh !important;
+  }
+
+  #mobile {
+    height: 180vh !important;
+  }
+}
+
+@media screen and (min-height: 820px) {
+  #laptop {
+    height: 160vh;
+  }
+
+  #mobile {
+    height: 180vh;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  #laptop .imgBox .laptopOutside {
+    transform: scale(1.3);
+  }
+
+  #mobile .imgBox .mobileOutside {
+    transform: scale(1.5);
+  }
 }
