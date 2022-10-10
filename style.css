@@ -269,6 +269,10 @@ section {
   overflow-y: scroll;
 }
 
+#mobile .imgBox .mobileOutside .mobileInside::-webkit-scrollbar {
+  display: none;
+}
+
 #mobile .imgBox .mobileOutside .mobileInside img {
   width: 100%;
   border-radius: 2rem;
