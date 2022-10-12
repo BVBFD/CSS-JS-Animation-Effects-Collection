@@ -365,6 +365,11 @@ section {
   #projects h1 {
     top: 20%;
   }
+
+  #job h1 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 1300px) {
