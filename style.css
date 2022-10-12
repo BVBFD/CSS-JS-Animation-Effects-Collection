@@ -373,7 +373,10 @@ section {
 }
 
 @media screen and (max-width: 1300px) {
-  #intro,
+  #intro {
+    height: 100vh;
+  }
+
   #laptop,
   #mobile {
     display: flex;
