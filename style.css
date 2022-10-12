@@ -34,6 +34,7 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 #intro {
@@ -381,11 +382,11 @@ section {
   #mobile {
     display: flex;
     flex-direction: column !important;
-    height: 130vh;
+    height: 160vh;
   }
 
   #mobile {
-    height: 170vh;
+    height: 190vh;
   }
 
   #intro .imgBox {
@@ -402,6 +403,7 @@ section {
 
   #laptop .imgBox {
     transform: none !important;
+    top: 4rem;
   }
 
   #mobile .imgBox {
@@ -458,7 +460,7 @@ section {
   }
 
   #laptop .imgBox {
-    margin-top: 3rem;
+    top: 3rem;
   }
 
   #mobile {
@@ -581,6 +583,10 @@ section {
 @media screen and (max-width: 400px) {
   #laptop {
     height: 160vh;
+  }
+
+  #laptop .imgBox {
+    top: -3rem;
   }
 
   #mobile {
