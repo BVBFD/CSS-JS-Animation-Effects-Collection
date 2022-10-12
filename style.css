@@ -354,12 +354,38 @@ section {
   transition: all 4s;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1800px) {
   #intro *,
   #name *,
   #job *,
-  #projects * {
+  #projects h1 {
     transform: none !important;
+  }
+
+  #projects h1 {
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #intro,
+  #laptop,
+  #mobile {
+    display: flex;
+    flex-direction: column !important;
+    height: 130vh;
+  }
+
+  #mobile {
+    height: 170vh;
+  }
+
+  #intro .imgBox {
+    display: none;
+  }
+
+  #intro .textBox {
+    width: 100%;
   }
 
   #projects h1 {
@@ -375,7 +401,11 @@ section {
   }
 
   #mobile .imgBox .mobileOutside {
-    top: 15%;
+    top: 10%;
+  }
+
+  #port {
+    display: none;
   }
 }
 
