@@ -4,63 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fire-Text-Animation-Effects</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
-      <div class="container">
-        <div class="card">
-          <div class="box">
-            <div>
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70" style="--i: 90"></circle>
-                </svg>
-                <div class="number">
-                  <h2>90<span>%</span></h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text">HTML</div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div>
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70" style="--i: 82"></circle>
-                </svg>
-                <div class="number">
-                  <h2>82<span>%</span></h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text">CSS</div>
-        </div>
-
-        <div class="card">
-          <div class="box">
-            <div>
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70" style="--i: 65"></circle>
-                </svg>
-                <div class="number">
-                  <h2>65<span>%</span></h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text">JavaScript</div>
-        </div>
-      </div>
-    </section>
+    <div class="text">
+      <h2>Fire</h2>
+    </div>
+    <svg>
+      <filter id="fire">
+        <feTurbulence
+          type="turbulence"
+          baseFrequency="0.015"
+          numOctaves="1"
+          seed="1"
+        >
+          <!-- 난류 난기류와 같은 이질감 표현 -->
+          <!-- baseFrequency 난류 난기류 이질감 표현 빈도 높을수록 이질감 커짐 -->
+          <!-- numOctaves 난류 난기류 진폭 갯수 -->
+          <!-- seed 난류 난기류 이질감 표현 시작 시점 -->
+          <animate
+            attributeName="baseFrequency"
+            dur="10s"
+            values="0.1;0.2"
+            repeatCount="indefinite"
+          />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="10" />
+      </filter>
+    </svg>
   </body>
 </html>
