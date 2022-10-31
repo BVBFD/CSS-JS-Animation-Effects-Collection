@@ -410,6 +410,14 @@ section {
   #port {
     display: none;
   }
+
+  #laptop .explainBox {
+    text-align: center;
+  }
+
+  #mobile .explainBox {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -470,6 +478,22 @@ section {
   #port a {
     font-size: 4rem;
   }
+
+  #laptop .explainBox p {
+    font-size: 1.2rem;
+  }
+
+  #mobile .explainBox p {
+    font-size: 1rem;
+  }
+
+  #laptop .explainBox h1 {
+    font-size: 4rem;
+  }
+
+  #mobile .explainBox h1 {
+    font-size: 4rem;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -508,15 +532,16 @@ section {
 
 @media screen and (max-width: 550px) {
   #laptop .explainBox {
-    padding: 0 2rem;
+    padding: 0 0.4rem;
   }
 
   #laptop .explainBox h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   #laptop .explainBox p {
-    font-size: 1.2rem;
+    font-size: 0.6rem;
+    line-height: 1.2rem;
   }
 
   #laptop .imgBox .laptopOutside {
@@ -524,25 +549,16 @@ section {
   }
 
   #mobile .explainBox {
-    padding: 0 2rem;
+    padding: 0 0.4rem;
   }
 
   #mobile .explainBox h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   #mobile .explainBox p {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  #laptop .explainBox p {
-    font-size: 1rem;
-  }
-
-  #mobile .explainBox p {
-    font-size: 1rem;
+    font-size: 0.6rem;
+    line-height: 1.2rem;
   }
 }
 
@@ -561,5 +577,23 @@ section {
 
   #laptop .imgBox .laptopOutside {
     transform: scale(0.5);
+  }
+
+  #laptop .explainBox {
+    padding: 0 0rem;
+  }
+
+  #mobile .explainBox {
+    padding: 0 0rem;
+  }
+
+  #laptop .explainBox p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  #mobile .explainBox p {
+    font-size: 1rem;
+    line-height: 1.2rem;
   }
 }
