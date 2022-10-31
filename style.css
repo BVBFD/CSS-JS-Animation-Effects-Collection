@@ -374,19 +374,11 @@ section {
 }
 
 @media screen and (max-width: 1300px) {
-  #intro {
-    height: 100vh;
-  }
-
   #laptop,
   #mobile {
     display: flex;
     flex-direction: column !important;
-    height: 160vh;
-  }
-
-  #mobile {
-    height: 190vh;
+    height: fit-content;
   }
 
   #intro .imgBox {
@@ -398,20 +390,21 @@ section {
   }
 
   #projects h1 {
-    top: 15%;
+    top: 0;
   }
 
   #laptop .imgBox {
     transform: none !important;
-    top: 4rem;
+    margin: 4rem 0;
   }
 
   #mobile .imgBox {
     transform: none !important;
+    margin: 6rem 0;
   }
 
   #mobile .imgBox .mobileOutside {
-    top: 10%;
+    position: relative;
   }
 
   #port {
@@ -450,26 +443,15 @@ section {
 
   #projects h1 {
     width: 100%;
-    top: 0%;
     font-size: 6rem !important;
   }
 
   #laptop {
     flex-direction: column;
-    height: 160vh;
-  }
-
-  #laptop .imgBox {
-    top: 3rem;
   }
 
   #mobile {
     flex-direction: column !important;
-    height: 170vh;
-  }
-
-  #mobile .imgBox .mobileOutside {
-    top: 10%;
   }
 
   .explainBox {
@@ -490,55 +472,43 @@ section {
   }
 }
 
-@media screen and (max-width: 960px) {
-  #laptop {
-    height: 160vh;
-  }
-
-  #laptop .imgBox {
-    margin-top: 0;
-  }
-
-  #laptop .imgBox .laptopOutside {
-    position: relative;
-    top: 10vh;
-  }
-
-  #mobile {
-    height: 170vh;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #laptop {
-    height: 150vh;
-  }
-
-  #laptop .imgBox .laptopOutside {
-    position: relative;
-    top: 10vh;
-  }
-
-  #mobile {
-    height: 170vh;
-  }
-}
-
 @media screen and (max-width: 720px) {
   #intro .textBox h1 {
     font-size: 12rem;
   }
 
-  #name h1 {
+  #job h1 {
     font-size: 4rem !important;
   }
 
-  #job h1 {
-    font-size: 3rem !important;
+  #projects h1 {
+    font-size: 4rem !important;
   }
 
-  #projects h1 {
-    font-size: 3rem !important;
+  #laptop .explainBox h1 {
+    font-size: 6rem;
+  }
+
+  #laptop .explainBox p {
+    font-size: 1.4rem;
+  }
+
+  #laptop .imgBox .laptopOutside {
+    transform: scale(0.7);
+  }
+
+  #mobile .explainBox h1 {
+    font-size: 6rem;
+  }
+
+  #mobile .explainBox p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #laptop .explainBox {
+    padding: 0 3rem;
   }
 
   #laptop .explainBox h1 {
@@ -546,11 +516,15 @@ section {
   }
 
   #laptop .explainBox p {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 
   #laptop .imgBox .laptopOutside {
-    transform: scale(0.8);
+    transform: scale(0.6);
+  }
+
+  #mobile .explainBox {
+    padding: 0 2rem;
   }
 
   #mobile .explainBox h1 {
@@ -558,88 +532,34 @@ section {
   }
 
   #mobile .explainBox p {
-    font-size: 1.1rem;
-  }
-
-  #mobile .imgBox .mobileOutside {
-    transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #laptop {
-    height: 160vh;
-  }
-
-  #laptop .imgBox .laptopOutside {
-    transform: scale(0.6);
-  }
-
-  #mobile {
-    height: 190vh;
+    font-size: 1.6rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  #laptop {
-    height: 160vh;
+  #laptop .explainBox p {
+    font-size: 1rem;
   }
 
-  #laptop .imgBox {
-    top: -3rem;
-  }
-
-  #mobile {
-    height: 200vh;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  #laptop {
-    height: 170vh;
-  }
-
-  #mobile {
-    height: 210vh;
+  #mobile .explainBox p {
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 300px) {
-  #laptop {
-    height: 200vh;
+  #name h1 {
+    font-size: 3rem !important;
   }
 
-  #mobile {
-    height: 240vh;
-  }
-}
-
-@media screen and (max-height: 780px) {
-  #laptop {
-    height: 180vh;
+  #job h1 {
+    font-size: 2.6rem !important;
   }
 
-  #mobile {
-    height: 230vh;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  #laptop {
-    height: 200vh;
+  #projects h1 {
+    font-size: 3rem !important;
   }
 
-  #mobile {
-    height: 250vh;
-  }
-}
-
-@media screen and (min-height: 1000px) {
   #laptop .imgBox .laptopOutside {
-    transform: scale(1.3);
-  }
-
-  #mobile .imgBox .mobileOutside {
-    transform: scaleY(1.2) scaleX(1.5);
+    transform: scale(0.5);
   }
 }
