@@ -497,6 +497,10 @@ section {
 }
 
 @media screen and (max-width: 720px) {
+  section {
+    height: auto;
+  }
+
   #intro .textBox h1 {
     font-size: 12rem;
   }
