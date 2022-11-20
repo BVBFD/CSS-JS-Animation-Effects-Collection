@@ -1,603 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-h1 {
-  display: inline-block;
-  text-align: center;
-}
-
-html::-webkit-scrollbar {
-  width: 0.4rem;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-html::-webkit-scrollbar-track {
-  background: black;
 }
 
 body {
-  width: 100vw;
-  overflow-x: hidden;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 section {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-  overflow-x: hidden;
 }
 
-#intro {
-  flex-direction: row;
-}
-
-#intro .textBox {
-  flex: 2;
-  height: 100%;
-  background: url('img/bg1.png') fixed;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-#intro .textBox h1 {
-  font-size: 30rem;
-}
-
-#intro .imgBox {
-  flex: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url('img/bg2.png') fixed;
-  background-color: white;
-}
-
-#intro .imgBox img {
-  filter: drop-shadow(12px 14px 2px black);
-}
-
-#name {
-  justify-content: flex-start;
-  align-items: center;
-  background: url('img/bg1.png') fixed;
-  background-color: white;
-  color: blueviolet;
+section div {
   position: relative;
-  z-index: 99;
-}
-
-#name h1 {
-  font-size: 10rem;
-}
-
-#job {
-  background: url('img/bg1.png') fixed;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: black;
-  color: whitesmoke;
-}
-
-#job h1 {
-  font-size: 10rem;
-  margin: 1rem;
-}
-
-#projects {
-  justify-content: center;
-  align-items: flex-start;
-  background: url('img/bg2.png') fixed;
-  background-color: lightyellow;
-  color: darkred;
-}
-
-#projects h1 {
-  font-size: 10rem;
-  position: relative;
-  top: 200vh;
-}
-
-#laptop {
-  flex-direction: row;
-  background: url('img/bg2.png') fixed;
-  background-color: black;
-  color: white;
-}
-
-#laptop .explainBox {
-  flex: 1;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 4rem;
-}
-
-#laptop .explainBox h1 {
-  font-size: 10rem;
-}
-
-#laptop .explainBox p {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
-#laptop .explainBox button {
-  margin-top: 4rem;
-  padding: 1rem 1.4rem;
-  background-color: goldenrod;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.4rem;
-}
-
-#laptop .explainBox button:hover {
-  background-color: white;
-  color: goldenrod;
-}
-
-#laptop .explainBox button:active {
-  transform: scale(0.8);
-}
-
-#laptop .imgBox {
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transform: translateX(0);
-}
-
-#laptop .imgBox .laptopOutside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#laptop .imgBox .laptopOutside .laptopInside {
-  width: 32rem;
-  height: 20rem;
-  border-radius: 1rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: absolute;
-  top: 0;
-  transform: scale(0.85);
-}
-
-#laptop .imgBox .laptopOutside .laptopInside img {
-  width: 100%;
-  border-radius: 1rem;
-  pointer-events: none;
-}
-
-#laptop .imgBox .laptopOutside .laptopInside::-webkit-scrollbar {
-  width: 0.4rem;
-}
-
-#laptop .imgBox .laptopOutside .laptopInside::-webkit-scrollbar-thumb {
-  background-color: black;
-}
-
-#laptop .imgBox .laptopOutside .laptopInside::-webkit-scrollbar-track {
-  background-color: white;
-}
-
-/* mobile */
-#mobile {
-  flex-direction: row-reverse;
-  background: url('img/bg2.png') fixed;
-  background-color: white;
-}
-
-#mobile .explainBox {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 4rem;
-}
-
-#mobile .explainBox h1 {
-  font-size: 10rem;
-}
-
-#mobile .explainBox p {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
-#mobile .explainBox button {
-  margin-top: 4rem;
-  padding: 1rem 1.4rem;
-  background-color: goldenrod;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.4rem;
-}
-
-#mobile .explainBox button:hover {
-  background-color: whitesmoke;
-  color: rgb(255, 183, 0);
-}
-
-#mobile .explainBox button:active {
-  transform: scale(0.8);
-}
-
-#mobile .imgBox {
-  flex: 1;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(0);
-  position: relative;
-}
-
-#mobile .imgBox .mobileOutside {
-  position: absolute;
-}
-
-#mobile .imgBox .mobileOutside .mobileInside {
-  position: absolute;
-  top: 2%;
-  left: 6%;
-  width: 16.4rem;
-  height: 36rem;
-  border-radius: 2rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-#mobile .imgBox .mobileOutside .mobileInside::-webkit-scrollbar {
-  display: none;
-}
-
-#mobile .imgBox .mobileOutside .mobileInside img {
-  width: 100%;
-  border-radius: 2rem;
-  pointer-events: none;
-}
-
-#port {
-  background: url('img/bg1.png') fixed;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-#port a {
-  width: fit-content;
-  height: 40%;
-  font-size: 8rem;
-  font-weight: bolder;
-  padding: 2rem 4rem;
-  text-transform: capitalize;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+  background: #358ec2;
   overflow: hidden;
-  cursor: pointer;
-  background-color: transparent;
-  text-align: center;
-  text-decoration: none;
-  color: white;
 }
 
-#port a:after {
-  width: 100%;
-  height: 100%;
+section div:nth-child(1) {
+  width: 50%;
+  background: url(img.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+section div h2 {
   position: absolute;
-  top: 0;
-  left: -100%;
-  content: 'Visit To Portfoilo Website';
-  background-color: white;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 1s;
+  white-space: nowrap;
+  font-size: 12em;
+  animation: animate 60s linear infinite;
 }
 
-#port a:hover::after {
-  transform: translateX(100%);
+section div:nth-child(1) h2 {
+  left: 100%;
+  -webkit-text-stroke: 0.4rem;
+  -webkit-text-stroke-color: lightcyan;
+  -webkit-text-fill-color: lightpink;
 }
 
-#port span {
-  display: block;
-  position: absolute;
-  top: 18%;
-  right: 12%;
-  color: black;
-  width: fit-content;
-  background-color: white;
-  height: 7rem;
-  padding: 0 1rem 1rem 1rem;
-  padding-bottom: 1rem;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    75% 75%,
-    50% 100%,
-    50% 75%,
-    0% 75%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.4rem;
-  transition: all 4s;
+section div:nth-child(2) h2 {
+  left: 0;
+  color: #fff;
 }
 
-@media screen and (max-width: 1800px) {
-  #intro *,
-  #name *,
-  #job *,
-  #projects h1 {
-    transform: none !important;
-  }
-
-  #projects h1 {
-    top: 20%;
-  }
-
-  #job h1 {
-    width: 100%;
-    text-align: center;
-  }
+section div h2 {
+  line-height: 100vh;
 }
 
-@media screen and (max-width: 1300px) {
-  #laptop,
-  #mobile {
-    display: flex;
-    flex-direction: column !important;
-    height: fit-content;
+@keyframes animate {
+  0% {
+    transform: translateX(0);
   }
-
-  #intro .imgBox {
-    display: none;
-  }
-
-  #intro .textBox {
-    width: 100%;
-  }
-
-  #projects h1 {
-    top: 0;
-  }
-
-  #laptop .imgBox {
-    transform: none !important;
-    margin: 4rem 0;
-  }
-
-  #mobile .imgBox {
-    transform: none !important;
-    margin: 6rem 0;
-  }
-
-  #mobile .imgBox .mobileOutside {
-    position: relative;
-  }
-
-  #port {
-    display: none;
-  }
-
-  #laptop .explainBox {
-    text-align: center;
-  }
-
-  #mobile .explainBox {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #intro {
-    flex-direction: column;
-  }
-
-  #intro .textBox {
-    width: 100%;
-  }
-
-  #intro .imgBox {
-    display: none;
-  }
-
-  #name h1 {
-    width: 100%;
-    font-size: 6rem !important;
-  }
-
-  #job h1 {
-    width: 100%;
-    font-size: 6rem !important;
-  }
-
-  #projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #projects h1 {
-    width: 100%;
-    font-size: 6rem !important;
-  }
-
-  #laptop {
-    flex-direction: column;
-  }
-
-  #mobile {
-    flex-direction: column !important;
-  }
-
-  .explainBox {
-    text-align: center;
-    overflow-wrap: anywhere;
-  }
-
-  #port {
-    display: none;
-  }
-
-  #port span {
-    display: none;
-  }
-
-  #port a {
-    font-size: 4rem;
-  }
-
-  #laptop .explainBox p {
-    font-size: 1.2rem;
-  }
-
-  #mobile .explainBox p {
-    font-size: 1rem;
-  }
-
-  #laptop .explainBox h1 {
-    font-size: 4rem;
-  }
-
-  #mobile .explainBox h1 {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  section {
-    height: auto;
-  }
-
-  #intro .textBox h1 {
-    font-size: 12rem;
-  }
-
-  #job h1 {
-    font-size: 4rem !important;
-  }
-
-  #projects h1 {
-    font-size: 4rem !important;
-  }
-
-  #laptop .explainBox h1 {
-    font-size: 6rem;
-  }
-
-  #laptop .explainBox p {
-    font-size: 1.4rem;
-  }
-
-  #laptop .imgBox .laptopOutside {
-    transform: scale(0.7);
-  }
-
-  #mobile .explainBox h1 {
-    font-size: 6rem;
-  }
-
-  #mobile .explainBox p {
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #laptop .explainBox {
-    padding: 0 0.4rem;
-  }
-
-  #laptop .explainBox h1 {
-    font-size: 2rem;
-  }
-
-  #laptop .explainBox p {
-    font-size: 0.6rem;
-    line-height: 1.2rem;
-  }
-
-  #laptop .imgBox .laptopOutside {
-    transform: scale(0.6);
-  }
-
-  #mobile .explainBox {
-    padding: 0 0.4rem;
-  }
-
-  #mobile .explainBox h1 {
-    font-size: 2rem;
-  }
-
-  #mobile .explainBox p {
-    font-size: 0.6rem;
-    line-height: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  #name h1 {
-    font-size: 3rem !important;
-  }
-
-  #job h1 {
-    font-size: 2.6rem !important;
-  }
-
-  #projects h1 {
-    font-size: 3rem !important;
-  }
-
-  #laptop .imgBox .laptopOutside {
-    transform: scale(0.5);
-  }
-
-  #laptop .explainBox {
-    padding: 0 0rem;
-  }
-
-  #mobile .explainBox {
-    padding: 0 0rem;
-  }
-
-  #laptop .explainBox p {
-    font-size: 1rem;
-    line-height: 1.2rem;
-  }
-
-  #mobile .explainBox p {
-    font-size: 1rem;
-    line-height: 1.2rem;
+  100% {
+    transform: translateX(-100%);
   }
 }
