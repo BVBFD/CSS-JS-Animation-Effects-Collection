@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -44,7 +44,7 @@ section {
 #intro .textBox {
   flex: 2;
   height: 100%;
-  background: url('img/bg1.png') fixed;
+  background: url("img/bg1.png") fixed;
   background-color: black;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('img/bg2.png') fixed;
+  background: url("img/bg2.png") fixed;
   background-color: white;
 }
 
@@ -73,7 +73,7 @@ section {
 #name {
   justify-content: flex-start;
   align-items: center;
-  background: url('img/bg1.png') fixed;
+  background: url("img/bg1.png") fixed;
   background-color: white;
   color: blueviolet;
   position: relative;
@@ -85,7 +85,7 @@ section {
 }
 
 #job {
-  background: url('img/bg1.png') fixed;
+  background: url("img/bg1.png") fixed;
   justify-content: flex-end;
   align-items: center;
   background-color: black;
@@ -100,7 +100,7 @@ section {
 #projects {
   justify-content: center;
   align-items: flex-start;
-  background: url('img/bg2.png') fixed;
+  background: url("img/bg2.png") fixed;
   background-color: lightyellow;
   color: darkred;
 }
@@ -113,7 +113,7 @@ section {
 
 #laptop {
   flex-direction: row;
-  background: url('img/bg2.png') fixed;
+  background: url("img/bg2.png") fixed;
   background-color: black;
   color: white;
 }
@@ -133,8 +133,8 @@ section {
 }
 
 #laptop .explainBox p {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
 }
 
 #laptop .explainBox button {
@@ -203,7 +203,7 @@ section {
 /* mobile */
 #mobile {
   flex-direction: row-reverse;
-  background: url('img/bg2.png') fixed;
+  background: url("img/bg2.png") fixed;
   background-color: white;
 }
 
@@ -221,8 +221,8 @@ section {
 }
 
 #mobile .explainBox p {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
 }
 
 #mobile .explainBox button {
@@ -281,7 +281,7 @@ section {
 }
 
 #port {
-  background: url('img/bg1.png') fixed;
+  background: url("img/bg1.png") fixed;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -314,7 +314,7 @@ section {
   position: absolute;
   top: 0;
   left: -100%;
-  content: 'Visit To Portfoilo Website';
+  content: "Visit To Portfoilo Website";
   background-color: white;
   color: black;
   display: flex;
